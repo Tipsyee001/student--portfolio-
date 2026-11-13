@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Academic Planner | Obanla Temitope Samuel</title>
+<meta name="description" content="Add, complete and delete study tasks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem('theme');document.documentElement.dataset.theme=t||'light';}catch(e){}</script>
+</head>
+<body>
+<div class="glow" id="glow" aria-hidden="true"></div>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="index.html">Temitope</a>
+<nav class="nav" aria-label="Main navigation"><ul id="menu"><li><a href="index.html">Home</a></li><li><a href="about.html">About Me</a></li><li><a href="projects.html">Projects</a></li><li><a href="planner.html" aria-current="page">Academic Planner</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+<div class="nav-controls">
+<button id="themeToggle" class="theme-btn" type="button" aria-label="Switch to light theme">&#9728;</button>
+<button class="menu-btn" id="menuBtn" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+</div>
+</div>
+</header>
+<main>
+<div class="wrap page-title"><p class="eyebrow">Planner</p><h1>Academic <em>planner</em></h1><div class="rule"></div><p>Organise your assignments, labs and exam prep. Tasks are saved in your browser.</p></div>
+<section>
+<div class="wrap">
+<div class="card">
+<form id="taskForm" class="add-task" novalidate>
+<label for="taskInput" style="position:absolute;left:-9999px">Task</label>
+<input type="text" id="taskInput" placeholder="Enter an assignment or study task..." maxlength="120">
+<label for="courseSelect" style="position:absolute;left:-9999px">Course</label>
+<select id="courseSelect"><option>Computer Science</option><option>Cybersecurity</option><option>Web Development</option><option>Mathematics</option></select>
+<button class="btn" type="submit">Add task</button>
+</form>
+<p class="error" id="taskMsg" role="alert"></p>
+<ul id="taskList"></ul>
+<div class="stats"><span id="taskCounter">0 tasks remaining</span><button class="btn ghost" id="clearCompleted" type="button" style="padding:.55rem 1.1rem">Clear completed</button></div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<p>&copy; 2026 Obanla Temitope Samuel. Built with HTML, CSS &amp; JavaScript.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
